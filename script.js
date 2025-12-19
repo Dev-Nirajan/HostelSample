@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
   const year = document.getElementById("year");
-
+  
   year.textContent = new Date().getFullYear();
+
   toggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
   });
