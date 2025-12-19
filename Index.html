@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cozy Corner Hostel</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container nav">
+    <div class="logo">CozyCorner</div>
+
+    <button class="nav-toggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Your Home Away From Home</h1>
+    <p>Affordable, comfortable, and friendly hostel in the heart of the city.</p>
+    <a href="#rooms" class="btn">View Rooms</a>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms" class="rooms">
+  <div class="container">
+    <h2>Our Rooms</h2>
+
+    <div class="room-grid">
+      <div class="room-card">
+        <h3>Dorm Bed</h3>
+        <p>Shared dorm with lockers and Wi-Fi</p>
+        <span>$15 / night</span>
+        <button>Book Now</button>
+      </div>
+
+      <div class="room-card">
+        <h3>Private Room</h3>
+        <p>Perfect for couples or solo travelers</p>
+        <span>$40 / night</span>
+        <button>Book Now</button>
+      </div>
+
+      <div class="room-card">
+        <h3>Ensuite Room</h3>
+        <p>Private bathroom & extra comfort</p>
+        <span>$60 / night</span>
+        <button>Book Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <h2>Hostel Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1550565118-3a14e8d0386f" alt="Hostel room">
+    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Common area">
+    <img src="https://images.unsplash.com/photo-1560067174-894f5b2b5e4f" alt="Dorm room">
+    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Reception">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Bathroom">
+    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Lounge">
+    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Lounge">
+    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Lounge">
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Have questions? Send us a message.</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <h2>Find Us</h2>
+  <div class="map-wrapper">
+    <iframe
+      src="https://www.google.com/maps?q=%20Kathmandu&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© <span id="year"></span> Cozy Corner Hostel. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

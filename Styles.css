@@ -1,0 +1,294 @@
+:root {
+  --primary: #2a9d8f;
+  --secondary: #f4a261;
+  --dark: #0f172a;
+  --gray: #6b7280;
+  --light: #f8fafc;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* MOBILE MENU */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--dark);
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1550565118-3a14e8d0386f") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 70px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: white;
+}
+
+.hero p {
+  color: #e5e7eb;
+  margin: 1rem 0;
+}
+
+.btn {
+  background: var(--secondary);
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ROOMS */
+.rooms {
+  padding: 4rem 0;
+}
+
+.rooms h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.room-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.room-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+  text-align: center;
+}
+
+.room-card span {
+  display: block;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.room-card button {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CONTACT */
+.contact {
+  padding: 4rem 0;
+  background: #eef2f7;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid #cbd5e1;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.map-section {
+  padding: 4rem 1rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.map-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.map-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .map-wrapper iframe {
+    height: 260px;
+  }
+}
+
+.gallery {
+  padding: 4rem 1rem;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 12px;
+}
+
+/* Mobile tweak */
+@media (max-width: 500px) {
+  .gallery-grid img {
+    height: 120px;
+  }
+}
