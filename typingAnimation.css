@@ -1,0 +1,24 @@
+.animation-typing {
+  animation: typing 5s steps(45),
+    /* Adjust steps() to match character count */ blink 0.5s step-end infinite
+      alternate;
+  width: 53ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid; /* Creates the cursor */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
